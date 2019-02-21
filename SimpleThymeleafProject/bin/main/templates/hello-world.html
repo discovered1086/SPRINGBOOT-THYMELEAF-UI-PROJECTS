@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>First thymeleaf page</title>
+
+<link rel="stylesheet" th:href="@{/mystyle.css}" />
+</head>
+<body>
+	<p th:text="'The name is: ' + ${name}" />
+	<p th:text="'The time is: ' + ${timeOnTheServer}" />
+</body>
+</html>
