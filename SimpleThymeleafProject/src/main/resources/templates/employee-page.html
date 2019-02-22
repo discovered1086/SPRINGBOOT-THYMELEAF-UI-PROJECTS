@@ -16,6 +16,8 @@
 <body>
 	<div class="container">
 		<h3>My Employee directory</h3>
+		<a th:href="@{/employees/addEmployee}" 
+			class="btn btn-primary btn-sm mb-3">Add Employee</a>
 		<hr />
 		<table class="table table-bordered table-striped">
 			<thead class="thead-dark">
@@ -23,6 +25,7 @@
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Email</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -30,6 +33,11 @@
 					<td th:text="${tempEmployee.firstName}" />
 					<td th:text="${tempEmployee.lastName}" />
 					<td th:text="${tempEmployee.email}" />
+					<td><a th:href="@{/employees/updateEmployeeForm(employeeId=${tempEmployee.employeeId})}" 
+						class="btn btn-primary btn-sm mb-3">Update Employee</a>
+						<a th:href="@{/employees/deleteEmployee(employeeId=${tempEmployee.employeeId})}" 
+						class="btn btn-primary btn-sm mb-3">Delete Employee</a>	
+					</td>
 				</tr>
 			</tbody>
 		</table>
