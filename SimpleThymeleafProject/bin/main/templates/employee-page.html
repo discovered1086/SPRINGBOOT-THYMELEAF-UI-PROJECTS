@@ -36,7 +36,8 @@
 					<td><a th:href="@{/employees/updateEmployeeForm(employeeId=${tempEmployee.employeeId})}" 
 						class="btn btn-primary btn-sm mb-3">Update Employee</a>
 						<a th:href="@{/employees/deleteEmployee(employeeId=${tempEmployee.employeeId})}" 
-						class="btn btn-primary btn-sm mb-3">Delete Employee</a>	
+						class="btn btn-danger btn-sm mb-3"
+						onclick="if(!(confirm('Are you sure you want to delete this employee?'))) return false">Delete Employee</a>	
 					</td>
 				</tr>
 			</tbody>
